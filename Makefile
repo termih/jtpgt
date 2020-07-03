@@ -36,7 +36,7 @@ Tpgt:
 	javac -d classes $(SOURCES)
 
 run:
-	export LANG=en_GB; java -cp classes $(PROGRAM)
+	java -cp classes $(PROGRAM)
 
 clean:
 	rm $(CLASSES)
