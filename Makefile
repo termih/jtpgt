@@ -11,12 +11,14 @@ SOURCES= \
 	$(SRCDIR)/views/Statuspanel.java \
 	$(SRCDIR)/views/Textpanel.java \
 	$(SRCDIR)/views/Worktable.java \
+	$(SRCDIR)/controller/Controller.java \
 	$(SRCDIR)/Tpgt.java
 
 CLASSES= \
 	Beginnermenu.class \
 	Charpanel.class \
 	Cmdpanel.class \
+	Controller \
 	Lessonmenu.class \
 	Mainwindow.class \
 	Menubar.class \
