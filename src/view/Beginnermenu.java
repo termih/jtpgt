@@ -1,10 +1,12 @@
+package view;
+
 import javax.swing.*;
-import controller.Controller;
+import controller.BeginnerController;
 
 class Beginnermenu extends JMenu {
     private static final long serialVersionUID = 42349745783874l;
-
-    Controller con = new Controller();
+    Mainwindow mainwindow;
+    BeginnerController con = new BeginnerController(mainwindow);
 
     JMenuItem lesson01MenuItem = new JMenuItem();
     JMenuItem lesson02MenuItem = new JMenuItem();
@@ -12,7 +14,8 @@ class Beginnermenu extends JMenu {
     JMenuItem lesson04MenuItem = new JMenuItem();
     JMenuItem lesson05MenuItem = new JMenuItem();
 
-    public Beginnermenu() {
+    public Beginnermenu(Mainwindow mainwindow) {
+        this.mainwindow = mainwindow;
         lesson01MenuItem.setText("Lecke 01 (f, j)");
         lesson02MenuItem.setText("Lecke 02 (d, k)");
         lesson03MenuItem.setText("Lecke 03 (s, l)");

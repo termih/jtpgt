@@ -1,13 +1,13 @@
-
+package view;
 import javax.swing.*;
 import java.awt.*;
 
 
-class Mainwindow extends JFrame {
+public class Mainwindow extends JFrame {
     static final long serialVersionUID = 123254798434l;
 
-    Worktable worktable = new Worktable();
-    Menubar menubar = new Menubar();
+    Worktable worktable = new Worktable(this);
+    Menubar menubar = new Menubar(this);
 
     public Mainwindow() {
         this.setLayout( new BorderLayout() );
