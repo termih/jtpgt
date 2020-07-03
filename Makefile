@@ -1,5 +1,6 @@
 PROGRAM=Tpgt
 SRCDIR=src
+CLASSDIR=classes
 SOURCES= \
 	$(SRCDIR)/view/Beginnermenu.java \
 	$(SRCDIR)/view/Charpanel.java \
@@ -16,26 +17,26 @@ SOURCES= \
 	$(SRCDIR)/Tpgt.java
 
 CLASSES= \
-	BeginnerController \
-	Beginnermenu.class \
-	Charpanel.class \
-	Cmdpanel.class \
-	Controller \
-	Lessonmenu.class \
-	Mainwindow.class \
-	Menubar.class \
-	Progresspanel.class \
-	Statuspanel.class \
-	Textpanel.class \
-	Tpgt.class \
-	Worktable.class
+	$(CLASSDIR)/BeginnerController \
+	$(CLASSDIR)/Beginnermenu.class \
+	$(CLASSDIR)/Charpanel.class \
+	$(CLASSDIR)/Cmdpanel.class \
+	$(CLASSDIR)/Controller \
+	$(CLASSDIR)/Lessonmenu.class \
+	$(CLASSDIR)/Mainwindow.class \
+	$(CLASSDIR)/Menubar.class \
+	$(CLASSDIR)/Progresspanel.class \
+	$(CLASSDIR)/Statuspanel.class \
+	$(CLASSDIR)/Textpanel.class \
+	$(CLASSDIR)/Tpgt.class \
+	$(CLASSDIR)/Worktable.class
 
 
 Tpgt:
-	javac -d classes -s src $(SOURCES)
+	javac -d classes $(SOURCES)
 
 run:
 	java -cp classes $(PROGRAM)
 
 clean:
-	rm classes/$(CLASSES)
+	rm $(CLASSES)
