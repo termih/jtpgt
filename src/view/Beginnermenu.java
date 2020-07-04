@@ -9,8 +9,7 @@ import controller.Controller;
 class Beginnermenu extends JMenu {
     private static final long serialVersionUID = 42349745783874l;
     Mainwindow mainwindow;
-    // Controller con = new Controller();
-    Controller con;
+    Controller con = new Controller();
     BeginnerController bcon = new BeginnerController(mainwindow);
 
     JMenuItem lesson01MenuItem = new JMenuItem();
@@ -20,7 +19,6 @@ class Beginnermenu extends JMenu {
     JMenuItem lesson05MenuItem = new JMenuItem();
 
     public Beginnermenu(Mainwindow mainwindow) {
-        this.mainwindow = mainwindow;
         con = new Controller();
         lesson01MenuItem.setText(con.bundle.getString("Lesson01"));
         lesson02MenuItem.setText(con.bundle.getString("Lesson02"));
