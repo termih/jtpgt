@@ -15,4 +15,57 @@ public class BeginnerController {
         System.out.println("Yes");
     }
 
+    public void lesson02(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson03(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson04(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson05(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson06(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson07(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson08(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson09(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson10(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson11(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson12(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson13(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+    public void lesson14(ActionEvent e) {
+        System.out.println("Yes");
+    }
+
+
 }
