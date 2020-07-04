@@ -27,10 +27,15 @@ class Lessonmenu extends JMenu {
         this.nextLessonMenuItem.addActionListener(
             e -> lcon.nextLesson()
         );
+        this.repeatLessonMenuItem.addActionListener(
+            e -> lcon.repeatLesson()
+        );
+        this.previousLessonMenuItem.addActionListener(
+            e -> lcon.previousLesson()
+        );
         this.exitMenuItem.addActionListener(
             e -> lcon.exit()
         );
-
 
         this.setText(con.bundle.getString("Lesson"));
         this.add(new Beginnermenu(mainwindow));
