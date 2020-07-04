@@ -8,5 +8,6 @@ class Menubar extends JMenuBar {
     public Menubar(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.add(new Lessonmenu(mainwindow));
+        this.add(new Optionmenu(mainwindow));
     }
 }
