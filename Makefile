@@ -10,6 +10,7 @@ SOURCES= \
 	$(SRCDIR)/view/Lessonmenu.java \
 	$(SRCDIR)/view/Mainwindow.java \
 	$(SRCDIR)/view/Menubar.java \
+	$(SRCDIR)/view/Middlemenu.java \
 	$(SRCDIR)/view/Optionmenu.java \
 	$(SRCDIR)/view/Progresspanel.java \
 	$(SRCDIR)/view/Statuspanel.java \
@@ -18,6 +19,7 @@ SOURCES= \
 	$(SRCDIR)/controller/Controller.java \
 	$(SRCDIR)/controller/BeginnerController.java \
 	$(SRCDIR)/controller/HelpController.java \
+	$(SRCDIR)/controller/MiddleController.java \
 	$(SRCDIR)/controller/OptionController.java \
 	$(SRCDIR)/model/AppProperties.java \
 	$(SRCDIR)/Tpgt.java
@@ -35,6 +37,8 @@ CLASSES= \
 	$(CLASSDIR)/Lessonmenu.class \
 	$(CLASSDIR)/Mainwindow.class \
 	$(CLASSDIR)/Menubar.class \
+	$(CLASSDIR)/MiddleController.class \
+	$(CLASSDIR)/Middlemenu.class \
 	$(CLASSDIR)/Optionmenu.class \
 	$(CLASSDIR)/OptionController.class \
 	$(CLASSDIR)/Progresspanel.class \

@@ -8,12 +8,12 @@ class Lessonmenu extends JMenu {
     Mainwindow mainwindow;
 
     Controller con = new Controller();
-    Beginnermenu beginnermenu = new Beginnermenu(mainwindow);
 
     public Lessonmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.setText(con.bundle.getString("Lesson"));
-        this.add(beginnermenu);
+        this.add(new Beginnermenu(mainwindow));
+        this.add(new Middlemenu(mainwindow));
     }
 
 }
