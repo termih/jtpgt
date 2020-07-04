@@ -2,6 +2,7 @@ PROGRAM=Tpgt
 SRCDIR=src
 CLASSDIR=classes
 SOURCES= \
+	$(SRCDIR)/view/Advancedmenu.java \
 	$(SRCDIR)/view/Beginnermenu.java \
 	$(SRCDIR)/view/Charpanel.java \
 	$(SRCDIR)/view/Cmdpanel.java \
@@ -16,15 +17,19 @@ SOURCES= \
 	$(SRCDIR)/view/Statuspanel.java \
 	$(SRCDIR)/view/Textpanel.java \
 	$(SRCDIR)/view/Worktable.java \
+	$(SRCDIR)/controller/AdvancedController.java \
 	$(SRCDIR)/controller/Controller.java \
 	$(SRCDIR)/controller/BeginnerController.java \
 	$(SRCDIR)/controller/HelpController.java \
+	$(SRCDIR)/controller/LessonController.java \
 	$(SRCDIR)/controller/MiddleController.java \
 	$(SRCDIR)/controller/OptionController.java \
 	$(SRCDIR)/model/AppProperties.java \
 	$(SRCDIR)/Tpgt.java
 
 CLASSES= \
+	$(CLASSDIR)/AdvancedController.class \
+	$(CLASSDIR)/Advancedmenu.class \
 	$(CLASSDIR)/AppProperties.class \
 	$(CLASSDIR)/BeginnerController.class \
 	$(CLASSDIR)/Beginnermenu.class \
@@ -34,6 +39,7 @@ CLASSES= \
 	$(CLASSDIR)/Helpmenu.class \
 	$(CLASSDIR)/HelpController.class \
 	$(CLASSDIR)/Language.class \
+	$(CLASSDIR)/LessonController.class \
 	$(CLASSDIR)/Lessonmenu.class \
 	$(CLASSDIR)/Mainwindow.class \
 	$(CLASSDIR)/Menubar.class \

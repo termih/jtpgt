@@ -1,8 +1,6 @@
 package view;
 
 import javax.swing.*;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import controller.BeginnerController;
 import controller.Controller;
 

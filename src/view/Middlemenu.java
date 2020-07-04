@@ -1,12 +1,11 @@
 package view;
 
 import javax.swing.*;
-// import java.util.ResourceBundle;
 import controller.MiddleController;
 import controller.Controller;
 
 class Middlemenu extends JMenu {
-    private static final long serialVersionUID = 42349745783874l;
+    private static final long serialVersionUID = 383489343434l;
     Mainwindow mainwindow;
     Controller con = new Controller();
     MiddleController bcon = new MiddleController(mainwindow);
