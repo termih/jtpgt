@@ -12,6 +12,7 @@ public class Helpmenu extends JMenu {
 
     JMenuItem aboutMenuItem = new JMenuItem();
     JMenuItem contentMenuItem = new JMenuItem();
+    JMenuItem creditMenuItem = new JMenuItem();
 
     public Helpmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
@@ -20,13 +21,17 @@ public class Helpmenu extends JMenu {
 
         this.aboutMenuItem.setText(con.bundle.getString("About"));
         this.contentMenuItem.setText(con.bundle.getString("Content"));
+        this.creditMenuItem.setText(con.bundle.getString("Credit"));
 
         this.aboutMenuItem.addActionListener(
             e -> hcon.about(mainwindow));
         this.contentMenuItem.addActionListener(
             e -> hcon.content(mainwindow));
+        this.creditMenuItem.addActionListener(
+            e -> hcon.credit(mainwindow));
 
         this.add(contentMenuItem);
+        this.add(creditMenuItem);
         this.add(aboutMenuItem);
         this.setText(con.bundle.getString("Help"));
     }

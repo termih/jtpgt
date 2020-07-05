@@ -15,7 +15,12 @@ public class HelpController {
         mainwindow.model.aboutBoxShow();
     }
 
+    public void credit(Mainwindow mainwindow) {
+        JOptionPane.showMessageDialog(mainwindow,
+        "Thanks to Ian Gardner for his English-language curriculum\nfrom his book, \"The milk is white.\"");
+    }
+
     public void content(Mainwindow mainwindow) {
-        JOptionPane.showMessageDialog(mainwindow, "Shadow method");
+
     }
 }
