@@ -9,7 +9,7 @@ class Lessonmenu extends JMenu {
     Mainwindow mainwindow;
 
     Controller con = new Controller();
-    LessonController lcon = new LessonController();
+    LessonController lcon;
 
     JMenuItem nextLessonMenuItem = new JMenuItem();
     JMenuItem repeatLessonMenuItem = new JMenuItem();
@@ -18,6 +18,7 @@ class Lessonmenu extends JMenu {
 
     public Lessonmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
+        this.lcon = new LessonController(mainwindow);
 
         this.nextLessonMenuItem.setText(con.bundle.getString("nextLesson"));
         this.repeatLessonMenuItem.setText(con.bundle.getString("repeatLesson"));
