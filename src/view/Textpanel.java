@@ -19,11 +19,9 @@ public class Textpanel extends JPanel {
         lineTextPane.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 24)); // NOI18N
         lineTextPane.addKeyListener(new KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                // lineTextPaneKeyTyped(evt);
                 tcon.formKeyTyped(evt);
             }
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                // lineTextPaneKeyPressed(evt);
                 tcon.lineTextPaneKeyPressed(evt);
             }
         });

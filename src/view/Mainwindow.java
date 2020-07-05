@@ -1,6 +1,7 @@
 package view;
 import javax.swing.*;
 import java.awt.*;
+import model.Model;
 
 
 public class Mainwindow extends JFrame {
@@ -8,8 +9,12 @@ public class Mainwindow extends JFrame {
 
     public Worktable worktable = new Worktable(this);
     Menubar menubar = new Menubar(this);
+    public Model model;
+
+    public JTextPane lineTextPane = worktable.textpanel.lineTextPane;
 
     public Mainwindow() {
+        this.model = new Model(this);
         this.setLayout( new BorderLayout() );
         this.add(worktable);
         this.setMinimumSize(new java.awt.Dimension(800, 500));

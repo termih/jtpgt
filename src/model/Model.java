@@ -159,22 +159,18 @@ public class Model {
         }
         fr.close();
 
-        mainwindow.worktable.textpanel.lineTextPane.setText(lessonLines.get(0));
+        mainwindow.lineTextPane.setText(lessonLines.get(0));
 
         setCharColor(0, Color.orange);
         Integer lessonCount = lessonLines.size();
-        // mainwindow.rowCountField.setText(
-        //         "Sorok száma: " + lessonCount.toString());
         mainwindow.worktable.statuspanel.rowCountField.setText(
                 "Sorok száma: " + lessonCount.toString());
-        // mainwindow.actualRowField.setText("Aktuális sor: 1");
         mainwindow.worktable.statuspanel.actualRowField.
             setText("Aktuális sor: 1");
         mainwindow.worktable.statuspanel.errorField.
             setText("Hiba: 0");
         actualLine = 0;
         actualIndex = 0;
-        // mainwindow.lessonProgressBar.setMaximum(lessonLength);
         mainwindow.worktable.progresspanel.progressBar.
             setMaximum(lessonLength);
         mainwindow.worktable.progresspanel.progressBar.setMinimum(0);
@@ -182,7 +178,6 @@ public class Model {
         lessonPointer = 0;
         String helperFilename = lessonFnameToHelperFname(lessonFileName);
         this.loadHelptext(helperFilename);
-        // mainwindow.charTextField.setText("");
         mainwindow.worktable.charpanel.charField.setText("");
     }
 
@@ -232,4 +227,13 @@ public class Model {
             "/" + helperFileName;
         return helperPath;
     }
+
+    public void kiir() {
+        System.out.println("--------------------------");
+        for(String line : lessonLines) {
+            System.out.println(line);
+        }
+        System.out.println("--------------------------");
+    }
+
 }
