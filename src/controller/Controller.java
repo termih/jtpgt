@@ -18,17 +18,14 @@ public class Controller {
     public Controller(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         String langStr = pro.getProperty("lang");
-        System.out.println("Lang: "+langStr);
         if(langStr.equals("hu")) {
             this.bundle = ResourceBundle.getBundle(
                 "bundle", magyar);
             mainwindow.model.setLessonsLanguage("Hungarian");
-            System.out.println("magyar");
         }else {
             this.bundle = ResourceBundle.getBundle(
                 "bundle", Locale.ROOT);
             mainwindow.model.setLessonsLanguage("English");
-            System.out.println("angol");
         }
     }
 
