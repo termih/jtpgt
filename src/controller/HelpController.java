@@ -13,7 +13,7 @@ public class HelpController {
     }
 
     public void about(Mainwindow mainwindow) {
-        JOptionPane.showMessageDialog(mainwindow, aboutStr);
+        mainwindow.model.aboutBoxShow();
     }
 
     public void content(Mainwindow mainwindow) {
