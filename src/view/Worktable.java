@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Worktable extends JPanel {
     private static final long serialVersionUID = 429343438l;
     Mainwindow mainwindow;
-    public Textpanel textpanel = new Textpanel();
+    public Textpanel textpanel;
     public Charpanel charpanel = new Charpanel();
     public Cmdpanel cmdpanel = new Cmdpanel();
     public Progresspanel progresspanel = new Progresspanel();
@@ -13,6 +13,7 @@ public class Worktable extends JPanel {
 
     public Worktable(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
+        this.textpanel =  new Textpanel(mainwindow);
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         this.add(textpanel);
         this.add(charpanel);

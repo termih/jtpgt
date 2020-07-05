@@ -24,6 +24,7 @@ SOURCES= \
 	$(SRCDIR)/controller/LessonController.java \
 	$(SRCDIR)/controller/MiddleController.java \
 	$(SRCDIR)/controller/OptionController.java \
+	$(SRCDIR)/controller/TextpaneController.java \
 	$(SRCDIR)/model/AppProperties.java \
 	$(SRCDIR)/model/Model.java \
 	$(SRCDIR)/Tpgt.java
@@ -52,6 +53,7 @@ CLASSES= \
 	$(CLASSDIR)/Progresspanel.class \
 	$(CLASSDIR)/Statuspanel.class \
 	$(CLASSDIR)/Textpanel.class \
+	$(CLASSDIR)/TextpaneController.class \
 	$(CLASSDIR)/Tpgt.class \
 	$(CLASSDIR)/Worktable.class
 
