@@ -8,7 +8,7 @@ class Lessonmenu extends JMenu {
     private static final long serialVersionUID = 48394393493493l;
     Mainwindow mainwindow;
 
-    Controller con = new Controller();
+    Controller con;
     LessonController lcon;
 
     JMenuItem nextLessonMenuItem = new JMenuItem();
@@ -19,6 +19,7 @@ class Lessonmenu extends JMenu {
     public Lessonmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.lcon = new LessonController(mainwindow);
+        this.con = new Controller(mainwindow);
 
         this.nextLessonMenuItem.setText(con.bundle.getString("nextLesson"));
         this.repeatLessonMenuItem.setText(con.bundle.getString("repeatLesson"));

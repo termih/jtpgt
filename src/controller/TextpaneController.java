@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.Color;
 import view.Mainwindow;
 
-public class TextpaneController extends Controller {
+public class TextpaneController {
 
     boolean enter = false;
     Mainwindow mainwindow;

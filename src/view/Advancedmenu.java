@@ -7,7 +7,7 @@ import controller.Controller;
 class Advancedmenu extends JMenu {
     private static final long serialVersionUID = 348384934874l;
     Mainwindow mainwindow;
-    Controller con = new Controller();
+    Controller con;
     AdvancedController acon;
 
     JMenuItem lesson29MenuItem = new JMenuItem();
@@ -28,7 +28,8 @@ class Advancedmenu extends JMenu {
     public Advancedmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         acon =  new AdvancedController(mainwindow);
-        con = new Controller();
+        con = new Controller(mainwindow);
+
         lesson29MenuItem.setText(con.bundle.getString("Lesson29"));
         lesson30MenuItem.setText(con.bundle.getString("Lesson30"));
         lesson31MenuItem.setText(con.bundle.getString("Lesson31"));

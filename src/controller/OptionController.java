@@ -7,11 +7,16 @@ import java.io.*;
 import javax.swing.JOptionPane;
 import model.AppProperties;
 
-public class OptionController extends Controller {
+public class OptionController {
 
+    Mainwindow mainwindow;
     AppProperties ap = new AppProperties();
 
-    public void setBundle(String locale, Mainwindow mainwindow) {
+    public OptionController(Mainwindow mainwindow) {
+        this.mainwindow = mainwindow;
+    }
+
+    public void setBundle(String locale) {
         Properties pro = new Properties();
 
         if(locale.equals("hu")) {

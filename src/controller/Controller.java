@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import java.util.Properties;
 import model.AppProperties;
 import model.Model;
+import view.Mainwindow;
 
 public class Controller {
 
@@ -12,17 +13,21 @@ public class Controller {
     public ResourceBundle bundle;
     AppProperties ap = new AppProperties();
     Properties pro = ap.loadProperties();
+    Mainwindow mainwindow;
 
-    public Controller() {
+    public Controller(Mainwindow mainwindow) {
+        this.mainwindow = mainwindow;
         String langStr = pro.getProperty("lang");
         System.out.println("Lang: "+langStr);
         if(langStr.equals("hu")) {
             this.bundle = ResourceBundle.getBundle(
                 "bundle", magyar);
+            mainwindow.model.setLessonsLanguage("Hungarian");
             System.out.println("magyar");
         }else {
             this.bundle = ResourceBundle.getBundle(
                 "bundle", Locale.ROOT);
+            mainwindow.model.setLessonsLanguage("English");
             System.out.println("angol");
         }
     }

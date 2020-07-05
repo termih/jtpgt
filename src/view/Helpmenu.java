@@ -2,10 +2,12 @@ package view;
 
 import javax.swing.*;
 import controller.HelpController;
+import controller.Controller;
 
 public class Helpmenu extends JMenu {
     private static final long serialVersionUID = 8343884989394834l;
-    HelpController con = new HelpController();
+    HelpController hcon;
+    Controller con;
     Mainwindow mainwindow;
 
     JMenuItem aboutMenuItem = new JMenuItem();
@@ -13,14 +15,16 @@ public class Helpmenu extends JMenu {
 
     public Helpmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
+        this.hcon  = new HelpController(mainwindow);
+        this.con = new Controller(mainwindow);
 
         this.aboutMenuItem.setText(con.bundle.getString("About"));
         this.contentMenuItem.setText(con.bundle.getString("Content"));
 
         this.aboutMenuItem.addActionListener(
-            e -> con.about(mainwindow));
+            e -> hcon.about(mainwindow));
         this.contentMenuItem.addActionListener(
-            e -> con.content(mainwindow));
+            e -> hcon.content(mainwindow));
 
         this.add(contentMenuItem);
         this.add(aboutMenuItem);

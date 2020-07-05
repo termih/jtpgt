@@ -3,7 +3,7 @@ package controller;
 import java.awt.event.*;
 import view.Mainwindow;
 
-public class BeginnerController extends Controller {
+public class BeginnerController {
 
     Mainwindow mainwindow;
 
