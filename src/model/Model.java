@@ -52,7 +52,7 @@ public class Model {
     }
 
     public void aboutBoxShow() {
-        ImageIcon imageIcon = new ImageIcon("images/gtpgt.ico");
+        ImageIcon imageIcon = new ImageIcon("images/tpgt.png");
         JOptionPane.showMessageDialog(
                 mainwindow,
                 applicationName

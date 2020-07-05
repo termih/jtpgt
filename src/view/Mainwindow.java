@@ -16,8 +16,10 @@ public class Mainwindow extends JFrame {
     public Mainwindow() {
         this.model = new Model(this);
         this.menubar = new Menubar(this);
+
+        this.setIconImage(new ImageIcon("images/gtpgt.png").getImage());
         this.setLayout( new BorderLayout() );
-        this.add(worktable);        
+        this.add(worktable);
         this.setMinimumSize(new java.awt.Dimension(800, 500));
         this.setTitle("jTpgt");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
