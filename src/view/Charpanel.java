@@ -3,9 +3,9 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-class Charpanel extends JPanel {
+public class Charpanel extends JPanel {
     private static final long serialVersionUID = 4234534343l;
-    JTextField charField = new JTextField();
+    public JTextField charField = new JTextField();
     GridBagConstraints gridBagConstraints = new GridBagConstraints();
     public Charpanel() {
         this.charField.setFont(new Font("Dialog", 0, 24));

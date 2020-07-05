@@ -3,13 +3,13 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-class Statuspanel extends JPanel {
+public class Statuspanel extends JPanel {
     private static final long serialVersionUID = 4298l;
-    JTextField rowCountField = new JTextField();
-    JTextField actualRowField = new JTextField();
-    JTextField errorField = new JTextField();
-    JTextField speedField = new JTextField();
-    JTextField maxSpeedField = new JTextField();
+    public JTextField rowCountField = new JTextField();
+    public JTextField actualRowField = new JTextField();
+    public JTextField errorField = new JTextField();
+    public JTextField speedField = new JTextField();
+    public JTextField maxSpeedField = new JTextField();
 
     public Statuspanel() {
         this.setLayout(new GridLayout(1, 0));

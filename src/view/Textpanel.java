@@ -3,10 +3,10 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-class Textpanel extends JPanel {
+public class Textpanel extends JPanel {
     private static final long serialVersionUID = 42l;
     JScrollPane scrollPane = new JScrollPane();
-    JTextPane lineTextPane = new JTextPane();
+    public JTextPane lineTextPane = new JTextPane();
     public Textpanel() {
         scrollPane.setViewportView(lineTextPane);
         lineTextPane.setEditable(false);

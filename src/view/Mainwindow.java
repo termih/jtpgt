@@ -6,7 +6,7 @@ import java.awt.*;
 public class Mainwindow extends JFrame {
     static final long serialVersionUID = 123254798434l;
 
-    Worktable worktable = new Worktable(this);
+    public Worktable worktable = new Worktable(this);
     Menubar menubar = new Menubar(this);
 
     public Mainwindow() {

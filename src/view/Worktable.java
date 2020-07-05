@@ -2,14 +2,14 @@ package view;
 
 import javax.swing.*;
 
-class Worktable extends JPanel {
+public class Worktable extends JPanel {
     private static final long serialVersionUID = 429343438l;
     Mainwindow mainwindow;
-    Textpanel textpanel = new Textpanel();
-    Charpanel charpanel = new Charpanel();
-    Cmdpanel cmdpanel = new Cmdpanel();
-    Progresspanel progresspanel = new Progresspanel();
-    Statuspanel statuspanel = new Statuspanel();
+    public Textpanel textpanel = new Textpanel();
+    public Charpanel charpanel = new Charpanel();
+    public Cmdpanel cmdpanel = new Cmdpanel();
+    public Progresspanel progresspanel = new Progresspanel();
+    public Statuspanel statuspanel = new Statuspanel();
 
     public Worktable(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;

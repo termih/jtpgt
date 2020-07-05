@@ -25,6 +25,7 @@ SOURCES= \
 	$(SRCDIR)/controller/MiddleController.java \
 	$(SRCDIR)/controller/OptionController.java \
 	$(SRCDIR)/model/AppProperties.java \
+	$(SRCDIR)/model/Model.java \
 	$(SRCDIR)/Tpgt.java
 
 CLASSES= \
@@ -45,6 +46,7 @@ CLASSES= \
 	$(CLASSDIR)/Menubar.class \
 	$(CLASSDIR)/MiddleController.class \
 	$(CLASSDIR)/Middlemenu.class \
+	$(CLASSDIR)/Model.class \
 	$(CLASSDIR)/Optionmenu.class \
 	$(CLASSDIR)/OptionController.class \
 	$(CLASSDIR)/Progresspanel.class \

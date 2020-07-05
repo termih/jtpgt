@@ -8,7 +8,7 @@ class Beginnermenu extends JMenu {
     private static final long serialVersionUID = 42349734344383874l;
     Mainwindow mainwindow;
     Controller con = new Controller();
-    BeginnerController bcon = new BeginnerController(mainwindow);
+    BeginnerController bcon;
 
     JMenuItem lesson01MenuItem = new JMenuItem();
     JMenuItem lesson02MenuItem = new JMenuItem();
@@ -26,6 +26,8 @@ class Beginnermenu extends JMenu {
     JMenuItem lesson14MenuItem = new JMenuItem();
 
     public Beginnermenu(Mainwindow mainwindow) {
+        this.mainwindow = mainwindow;
+        this.bcon = new BeginnerController(mainwindow);
         con = new Controller();
         lesson01MenuItem.setText(con.bundle.getString("Lesson01"));
         lesson02MenuItem.setText(con.bundle.getString("Lesson02"));
@@ -42,20 +44,20 @@ class Beginnermenu extends JMenu {
         lesson13MenuItem.setText(con.bundle.getString("Lesson13"));
         lesson14MenuItem.setText(con.bundle.getString("Lesson14"));
 
-        lesson01MenuItem.addActionListener(e -> bcon.lesson01(e));
-        lesson02MenuItem.addActionListener(e -> bcon.lesson02(e));
-        lesson03MenuItem.addActionListener(e -> bcon.lesson03(e));
-        lesson04MenuItem.addActionListener(e -> bcon.lesson04(e));
-        lesson05MenuItem.addActionListener(e -> bcon.lesson05(e));
-        lesson06MenuItem.addActionListener(e -> bcon.lesson06(e));
-        lesson07MenuItem.addActionListener(e -> bcon.lesson07(e));
-        lesson08MenuItem.addActionListener(e -> bcon.lesson08(e));
-        lesson09MenuItem.addActionListener(e -> bcon.lesson09(e));
-        lesson10MenuItem.addActionListener(e -> bcon.lesson10(e));
-        lesson11MenuItem.addActionListener(e -> bcon.lesson11(e));
-        lesson12MenuItem.addActionListener(e -> bcon.lesson12(e));
-        lesson13MenuItem.addActionListener(e -> bcon.lesson13(e));
-        lesson14MenuItem.addActionListener(e -> bcon.lesson14(e));
+        lesson01MenuItem.addActionListener(e -> bcon.lesson01());
+        lesson02MenuItem.addActionListener(e -> bcon.lesson02());
+        lesson03MenuItem.addActionListener(e -> bcon.lesson03());
+        lesson04MenuItem.addActionListener(e -> bcon.lesson04());
+        lesson05MenuItem.addActionListener(e -> bcon.lesson05());
+        lesson06MenuItem.addActionListener(e -> bcon.lesson06());
+        lesson07MenuItem.addActionListener(e -> bcon.lesson07());
+        lesson08MenuItem.addActionListener(e -> bcon.lesson08());
+        lesson09MenuItem.addActionListener(e -> bcon.lesson09());
+        lesson10MenuItem.addActionListener(e -> bcon.lesson10());
+        lesson11MenuItem.addActionListener(e -> bcon.lesson11());
+        lesson12MenuItem.addActionListener(e -> bcon.lesson12());
+        lesson13MenuItem.addActionListener(e -> bcon.lesson13());
+        lesson14MenuItem.addActionListener(e -> bcon.lesson14());
 
         this.setText(con.bundle.getString("Beginner"));
         this.add(lesson01MenuItem);
