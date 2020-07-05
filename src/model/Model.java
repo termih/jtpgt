@@ -145,12 +145,9 @@ public class Model {
     public void tryLoadLesson(String lessonFileName)
             throws FileNotFoundException, IOException {
         this.lessonFileName = lessonFileName;
-        // this.mainwindow.setTitle(lessonFileName);
         lessonLines.clear();
         String lessonPath = "lessons/" + lessonsLanguage +
             "/" + lessonFileName;
-
-
 
         FileReader fr = new FileReader(lessonPath);
         Scanner sc = new Scanner(fr);
@@ -162,13 +159,7 @@ public class Model {
         }
         fr.close();
 
-
-
-        // mainwindow.lineTextPane.setText(lessonLines.get(0));
         mainwindow.worktable.textpanel.lineTextPane.setText(lessonLines.get(0));
-
-System.out.println("--------valami----------");
-
 
         setCharColor(0, Color.orange);
         Integer lessonCount = lessonLines.size();

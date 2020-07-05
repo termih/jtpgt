@@ -23,51 +23,51 @@ public class BeginnerController {
     }
 
     public void lesson03() {
-        System.out.println("Yes");
+        model.loadLesson("lesson03");
     }
 
     public void lesson04() {
-        System.out.println("Yes");
+        model.loadLesson("lesson04");
     }
 
     public void lesson05() {
-        System.out.println("Yes");
+        model.loadLesson("lesson05");
     }
 
     public void lesson06() {
-        System.out.println("Yes");
+        model.loadLesson("lesson06");
     }
 
     public void lesson07() {
-        System.out.println("Yes");
+        model.loadLesson("lesson07");
     }
 
     public void lesson08() {
-        System.out.println("Yes");
+        model.loadLesson("lesson08");
     }
 
     public void lesson09() {
-        System.out.println("Yes");
+        model.loadLesson("lesson09");
     }
 
     public void lesson10() {
-        System.out.println("Yes");
+        model.loadLesson("lesson10");
     }
 
     public void lesson11() {
-        System.out.println("Yes");
+        model.loadLesson("lesson11");
     }
 
     public void lesson12() {
-        System.out.println("Yes");
+        model.loadLesson("lesson12");
     }
 
     public void lesson13() {
-        System.out.println("Yes");
+        model.loadLesson("lesson13");
     }
 
     public void lesson14() {
-        System.out.println("Yes");
+        model.loadLesson("lesson14");
     }
 
 
