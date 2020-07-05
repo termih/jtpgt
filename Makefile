@@ -64,5 +64,7 @@ Tpgt:
 run:
 	java -cp classes $(PROGRAM)
 
+jar:
+	cd classes; jar cvfm ../tpgt.jar ../manifest.mf *
 clean:
 	rm $(CLASSES)
