@@ -21,6 +21,7 @@ public class HelpController {
     }
 
     public void content(Mainwindow mainwindow) {
-
+        JOptionPane.showMessageDialog(mainwindow,
+        "Shadow method");
     }
 }
