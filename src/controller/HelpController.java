@@ -4,7 +4,6 @@ import javax.swing.*;
 import view.Mainwindow;
 
 public class HelpController {
-    final String aboutStr = "jTpgt\nVersion: 0.1\nLicense: GNU GPL v2";
 
     Mainwindow mainwindow;
 
