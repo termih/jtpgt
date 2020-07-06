@@ -8,6 +8,7 @@ SOURCES= \
 	$(SRCDIR)/view/Charpanel.java \
 	$(SRCDIR)/view/Cmdpanel.java \
 	$(SRCDIR)/view/Helpmenu.java \
+	$(SRCDIR)/view/HelpDialog.java \
 	$(SRCDIR)/view/Languagemenu.java \
 	$(SRCDIR)/view/Lessonmenu.java \
 	$(SRCDIR)/view/Mainwindow.java \

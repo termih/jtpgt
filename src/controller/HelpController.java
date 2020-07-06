@@ -26,6 +26,7 @@ package controller;
 import javax.swing.*;
 import view.Mainwindow;
 import view.AboutDialog;
+import view.HelpDialog;
 
 public class HelpController {
 
@@ -40,7 +41,8 @@ public class HelpController {
     }
 
     public void content(Mainwindow mainwindow) {
-        JOptionPane.showMessageDialog(mainwindow,
-        "Shadow method");
+        // JOptionPane.showMessageDialog(mainwindow,
+        // "Shadow method");
+        new HelpDialog(mainwindow).setVisible(true);
     }
 }
