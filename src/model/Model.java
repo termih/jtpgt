@@ -40,17 +40,7 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 import view.Mainwindow;
 
-/**
- *
- * @author Sallai András
- */
 public class Model {
-
-    String applicationVersion = "0.8.0";
-    String applicationName = "jTpgt";
-    String applicationAuthor = "Sallai András";
-    String applicationCopyright = "Copyright (c) Sallai András, 2016, 2019, 2020";
-    String applicationLicenc = "GNU GPL v3";
 
     Mainwindow mainwindow;
 
@@ -72,25 +62,6 @@ public class Model {
 
     public void setLessonsLanguage(String lessonsLanguage) {
         this.lessonsLanguage = lessonsLanguage;
-    }
-
-    public void aboutBoxShow() {
-        ImageIcon imageIcon = new ImageIcon("images/tpgt.png");
-        JOptionPane.showMessageDialog(
-                mainwindow,
-                applicationName
-                + " "
-                + applicationVersion
-                + "\n"
-                + "Author: "
-                + applicationAuthor
-                + "\n"
-                + applicationCopyright
-                + "\n"
-                + applicationLicenc,
-                 "About",
-                JOptionPane.INFORMATION_MESSAGE,
-                imageIcon);
     }
 
     public void repeatLesson() {

@@ -2,6 +2,7 @@ PROGRAM=Tpgt
 SRCDIR=src
 CLASSDIR=classes
 SOURCES= \
+	$(SRCDIR)/view/AboutDialog.java \
 	$(SRCDIR)/view/Advancedmenu.java \
 	$(SRCDIR)/view/Beginnermenu.java \
 	$(SRCDIR)/view/Charpanel.java \
@@ -30,6 +31,7 @@ SOURCES= \
 	$(SRCDIR)/Tpgt.java
 
 CLASSES= \
+	$(CLASSDIR)/AboutDialog.class \
 	$(CLASSDIR)/AdvancedController.class \
 	$(CLASSDIR)/Advancedmenu.class \
 	$(CLASSDIR)/AppProperties.class \

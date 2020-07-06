@@ -25,6 +25,7 @@ package controller;
 
 import javax.swing.*;
 import view.Mainwindow;
+import view.AboutDialog;
 
 public class HelpController {
 
@@ -35,12 +36,7 @@ public class HelpController {
     }
 
     public void about(Mainwindow mainwindow) {
-        mainwindow.model.aboutBoxShow();
-    }
-
-    public void credit(Mainwindow mainwindow) {
-        JOptionPane.showMessageDialog(mainwindow,
-        "Thanks to Ian Gardner for his English-language curriculum\nfrom his book, \"The milk is white.\"");
+        new AboutDialog(mainwindow).setVisible(true);
     }
 
     public void content(Mainwindow mainwindow) {
