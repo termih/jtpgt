@@ -31,33 +31,11 @@ SOURCES= \
 	$(SRCDIR)/Tpgt.java
 
 CLASSES= \
-	$(CLASSDIR)/AboutDialog.class \
-	$(CLASSDIR)/AdvancedController.class \
-	$(CLASSDIR)/Advancedmenu.class \
-	$(CLASSDIR)/AppProperties.class \
-	$(CLASSDIR)/BeginnerController.class \
-	$(CLASSDIR)/Beginnermenu.class \
-	$(CLASSDIR)/Charpanel.class \
-	$(CLASSDIR)/Cmdpanel.class \
-	$(CLASSDIR)/Controller.class \
-	$(CLASSDIR)/Helpmenu.class \
-	$(CLASSDIR)/HelpController.class \
-	$(CLASSDIR)/Language.class \
-	$(CLASSDIR)/LessonController.class \
-	$(CLASSDIR)/Lessonmenu.class \
-	$(CLASSDIR)/Mainwindow.class \
-	$(CLASSDIR)/Menubar.class \
-	$(CLASSDIR)/MiddleController.class \
-	$(CLASSDIR)/Middlemenu.class \
-	$(CLASSDIR)/Model.class \
-	$(CLASSDIR)/Optionmenu.class \
-	$(CLASSDIR)/OptionController.class \
-	$(CLASSDIR)/Progresspanel.class \
-	$(CLASSDIR)/Statuspanel.class \
-	$(CLASSDIR)/Textpanel.class \
-	$(CLASSDIR)/TextpaneController.class \
-	$(CLASSDIR)/Tpgt.class \
-	$(CLASSDIR)/Worktable.class
+	$(CLASSDIR)/controller/*.class \
+	$(CLASSDIR)/model/*.class \
+	$(CLASSDIR)/view/*.class \
+	$(CLASSDIR)/*.class
+
 
 
 Tpgt:
