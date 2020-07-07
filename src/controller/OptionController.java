@@ -33,10 +33,11 @@ import model.AppProperties;
 public class OptionController {
 
     Mainwindow mainwindow;
-    AppProperties ap = new AppProperties();
+    AppProperties app;
 
     public OptionController(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
+        this.app = new AppProperties(mainwindow);
     }
 
     public void setBundle(String locale) {
@@ -47,7 +48,7 @@ public class OptionController {
         }else {
             pro.setProperty("lang", "us");
         }
-        ap.writeProperties(pro);
+        app.writeProperties(pro);
         JOptionPane.showMessageDialog(mainwindow,
             "Elmentve. A program újraindítása szükséges");
     }

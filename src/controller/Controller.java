@@ -34,12 +34,14 @@ public class Controller {
 
     Locale magyar = new Locale("hu", "HU");
     public ResourceBundle bundle;
-    AppProperties ap = new AppProperties();
-    Properties pro = ap.loadProperties();
+    AppProperties app;
+    Properties pro;
     Mainwindow mainwindow;
 
     public Controller(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
+        this.app = new AppProperties(mainwindow);
+        this.pro = app.loadProperties();
         String langStr = pro.getProperty("lang");
         if(langStr.equals("hu")) {
             this.bundle = ResourceBundle.getBundle(

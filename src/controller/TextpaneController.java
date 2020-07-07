@@ -37,8 +37,6 @@ public class TextpaneController implements ActionListener {
 
     Integer keyCount;
     public Integer maxSpeed;
-
-
     public Timer timer;
 
     public TextpaneController(Mainwindow mainwindow) {

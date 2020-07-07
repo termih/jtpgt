@@ -33,7 +33,6 @@ public class Mainwindow extends JFrame {
     public Worktable worktable = new Worktable(this);
     Menubar menubar;
     public Model model;
-
     public JTextPane lineTextPane = worktable.textpanel.lineTextPane;
 
     public Mainwindow() {

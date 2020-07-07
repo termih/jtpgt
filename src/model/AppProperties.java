@@ -25,8 +25,15 @@ package model;
 
 import java.io.*;
 import java.util.Properties;
+import javax.swing.JOptionPane;
+import view.Mainwindow;
 
 public class AppProperties {
+    private String propertiesFileName= "Tpgt.properties";
+    Mainwindow mainwindow;
+    public AppProperties(Mainwindow mainwindow) {
+        this.mainwindow = mainwindow;
+    }
 
     public Properties loadProperties() {
         Properties pro = new Properties();
@@ -39,7 +46,8 @@ public class AppProperties {
     }
 
     public Properties tryLoadProperties() throws IOException {
-        FileInputStream fis = new FileInputStream("Tpgt.properties");
+        checkPropertiesFile();
+        FileInputStream fis = new FileInputStream(propertiesFileName);
         Properties pro = new Properties();
         pro.load(fis);
         return pro;
@@ -54,8 +62,18 @@ public class AppProperties {
     }
 
     private void tryWriteProperties(Properties pro) throws IOException {
-        FileOutputStream fos = new FileOutputStream("Tpgt.properties");
+        FileOutputStream fos = new FileOutputStream(propertiesFileName);
         pro.store(fos, null);
+    }
+
+    private void checkPropertiesFile() {
+        File propertiesFile = new File(this.propertiesFileName);
+        if(!propertiesFile.exists()) {
+            JOptionPane.showMessageDialog(mainwindow, "Error! " +
+                this.propertiesFileName + " file not found!");
+            System.exit(1);            
+        }
+
     }
 
 }
