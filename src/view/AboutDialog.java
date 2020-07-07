@@ -129,7 +129,7 @@ public class AboutDialog extends JFrame {
         throws FileNotFoundException, IOException {
         JTextArea textArea = new JTextArea();
         FileReader reader = new FileReader("license.txt");
-        textArea.read(reader, "license.txt");
+        textArea.read(reader, "licence.txt");
         return textArea;
     }
 
