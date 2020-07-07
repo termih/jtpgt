@@ -1,0 +1,17 @@
+A tpgt kétnyelvű, magyar és angol nyelv gépelésoktató program.
+Megkönnyíti a tíz ujjal való gépelés elsajátítását.
+
+A tanuláshoz ajánlott minden nap 1 órát gyakorolni.
+Ha minden nap 1 órát gyakorlunk, akkor körülbelül 3
+hónap alatt egy olyan tudás sajátítható el, amellyel
+nagy koncentrációval minden billentyűzet, illetve
+karakter megismerhető.
+
+Gyakorlás közben ügyeljünk arra, hogy a már megismert
+karakterekhez tartozó billentyűket ne nézzük, a lenyomás
+közben. Az ujjaink pedig, minden lenyomott billentyű után
+térjenek vissza az alaphelyzetbe, mivel innen találjuk meg
+a többit.
+
+A magyar leckékhez magyar billentyűzetkiosztás,
+az angolhoz angol billentyűzetkiosztás szükséges.

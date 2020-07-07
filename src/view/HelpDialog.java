@@ -68,9 +68,16 @@ public class HelpDialog extends JFrame {
 
     private JTextArea tryReadFile()
         throws FileNotFoundException, IOException {
+        String helpFileName = "";
+        if(mainwindow.model.lessonsLanguage.equals("Hungarian")) {
+            helpFileName = "help_hu.txt";
+        }else {
+            helpFileName = "help.txt";
+        }
+
         JTextArea textArea = new JTextArea();
-        FileReader reader = new FileReader("help.txt");
-        textArea.read(reader, "license.txt");
+        FileReader reader = new FileReader(helpFileName);
+        textArea.read(reader, "licen.txt");
         return textArea;
     }
 

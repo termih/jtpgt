@@ -1,17 +1,17 @@
-A tpgt kétnyelvű, magyar és angol nyelv gépelésoktató program.
-Megkönnyíti a tíz ujjal való gépelés elsajátítását.
+Tpgt is a bilingual, Hungarian and English typing training program.
+It makes it easy to learn to type with ten fingers.
 
-A tanuláshoz ajánlott minden nap 1 órát gyakorolni.
-Ha minden nap 1 órát gyakorlunk, akkor körülbelül 3
-hónap alatt egy olyan tudás sajátítható el, amellyel
-nagy koncentrációval minden billentyűzet, illetve
-karakter megismerhető.
+It is recommended to practice 1 hour every day for learning.
+If we practice 1 hour every day, it is about 3
+months, a knowledge can be acquired with which
+with high concentration on all keyboards, respectively
+character is recognizable.
 
-Gyakorlás közben ügyeljünk arra, hogy a már megismert
-karakterekhez tartozó billentyűket ne nézzük, a lenyomás
-közben. Az ujjaink pedig, minden lenyomott billentyű után
-térjenek vissza az alaphelyzetbe, mivel innen találjuk meg
-a többit.
+As you practice, make sure you are already familiar with it
+do not look at the keys for characters, press
+while. And our fingers, after each key pressed
+return to baseline as we find it from here
+the rest.
 
-A magyar leckékhez magyar billentyűzetkiosztás,
-az angolhoz angol billentyűzetkiosztás szükséges.
+Hungarian keyboard layout for Hungarian lessons,
+English requires an English keyboard layout.
