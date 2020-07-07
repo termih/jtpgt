@@ -25,12 +25,10 @@ package view;
 
 import javax.swing.*;
 import controller.BeginnerController;
-import controller.Controller;
 
 class Beginnermenu extends JMenu {
     private static final long serialVersionUID = 42349734344383874l;
     Mainwindow mainwindow;
-    Controller con;
     BeginnerController bcon;
 
     JMenuItem lesson01MenuItem = new JMenuItem();
@@ -51,22 +49,21 @@ class Beginnermenu extends JMenu {
     public Beginnermenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.bcon = new BeginnerController(mainwindow);
-        this.con = new Controller(mainwindow);
 
-        lesson01MenuItem.setText(con.bundle.getString("Lesson01"));
-        lesson02MenuItem.setText(con.bundle.getString("Lesson02"));
-        lesson03MenuItem.setText(con.bundle.getString("Lesson03"));
-        lesson04MenuItem.setText(con.bundle.getString("Lesson04"));
-        lesson05MenuItem.setText(con.bundle.getString("Lesson05"));
-        lesson06MenuItem.setText(con.bundle.getString("Lesson06"));
-        lesson07MenuItem.setText(con.bundle.getString("Lesson07"));
-        lesson08MenuItem.setText(con.bundle.getString("Lesson08"));
-        lesson09MenuItem.setText(con.bundle.getString("Lesson09"));
-        lesson10MenuItem.setText(con.bundle.getString("Lesson10"));
-        lesson11MenuItem.setText(con.bundle.getString("Lesson11"));
-        lesson12MenuItem.setText(con.bundle.getString("Lesson12"));
-        lesson13MenuItem.setText(con.bundle.getString("Lesson13"));
-        lesson14MenuItem.setText(con.bundle.getString("Lesson14"));
+        lesson01MenuItem.setText(mainwindow.con.bundle.getString("Lesson01"));
+        lesson02MenuItem.setText(mainwindow.con.bundle.getString("Lesson02"));
+        lesson03MenuItem.setText(mainwindow.con.bundle.getString("Lesson03"));
+        lesson04MenuItem.setText(mainwindow.con.bundle.getString("Lesson04"));
+        lesson05MenuItem.setText(mainwindow.con.bundle.getString("Lesson05"));
+        lesson06MenuItem.setText(mainwindow.con.bundle.getString("Lesson06"));
+        lesson07MenuItem.setText(mainwindow.con.bundle.getString("Lesson07"));
+        lesson08MenuItem.setText(mainwindow.con.bundle.getString("Lesson08"));
+        lesson09MenuItem.setText(mainwindow.con.bundle.getString("Lesson09"));
+        lesson10MenuItem.setText(mainwindow.con.bundle.getString("Lesson10"));
+        lesson11MenuItem.setText(mainwindow.con.bundle.getString("Lesson11"));
+        lesson12MenuItem.setText(mainwindow.con.bundle.getString("Lesson12"));
+        lesson13MenuItem.setText(mainwindow.con.bundle.getString("Lesson13"));
+        lesson14MenuItem.setText(mainwindow.con.bundle.getString("Lesson14"));
 
         lesson01MenuItem.addActionListener(e -> bcon.lesson01());
         lesson02MenuItem.addActionListener(e -> bcon.lesson02());
@@ -83,7 +80,7 @@ class Beginnermenu extends JMenu {
         lesson13MenuItem.addActionListener(e -> bcon.lesson13());
         lesson14MenuItem.addActionListener(e -> bcon.lesson14());
 
-        this.setText(con.bundle.getString("Beginner"));
+        this.setText(mainwindow.con.bundle.getString("Beginner"));
         this.add(lesson01MenuItem);
         this.add(lesson02MenuItem);
         this.add(lesson03MenuItem);

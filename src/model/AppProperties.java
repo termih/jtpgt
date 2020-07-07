@@ -40,7 +40,7 @@ public class AppProperties {
         try {
             pro = tryLoadProperties();
         }catch(IOException e) {
-            System.err.println("Hiba! A beállításfájl betöltése sikertelen!");
+            System.err.println("Error! Load properties file failed!");
         }
         return pro;
     }
@@ -57,7 +57,7 @@ public class AppProperties {
         try {
             tryWriteProperties(pro);
         }catch(IOException e) {
-            System.err.println("Hiba! A beállítások kiíratása sikeretelen!");
+            System.err.println("Erorr! Write the properteis file failed!");
         }
     }
 
@@ -71,7 +71,7 @@ public class AppProperties {
         if(!propertiesFile.exists()) {
             JOptionPane.showMessageDialog(mainwindow, "Error! " +
                 this.propertiesFileName + " file not found!");
-            System.exit(1);            
+            System.exit(1);
         }
 
     }

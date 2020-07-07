@@ -90,5 +90,4 @@ public class BeginnerController {
         mainwindow.model.loadLesson("lesson14");
     }
 
-
 }

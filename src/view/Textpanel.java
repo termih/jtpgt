@@ -29,11 +29,13 @@ import java.awt.event.KeyAdapter;
 import controller.TextpaneController;
 
 public class Textpanel extends JPanel {
-    private static final long serialVersionUID = 42l;
+    private static final long serialVersionUID = 42843984394839l;
+
     JScrollPane scrollPane = new JScrollPane();
     public JTextPane lineTextPane = new JTextPane();
     Mainwindow mainwindow;
     public TextpaneController tcon;
+    
     public Textpanel(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.tcon = new TextpaneController(mainwindow);

@@ -37,7 +37,6 @@ public class Statuspanel extends JPanel {
     public Statuspanel() {
         maxSpeedField.setPreferredSize(new Dimension(150, 19));
         this.setLayout(new GridLayout(1, 0));
-        // this.setLayout(new FlowLayout());
         this.add(rowCountField);
         this.add(actualRowField);
         this.add(errorField);

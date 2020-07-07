@@ -49,16 +49,28 @@ public class AboutDialog extends JFrame {
         createCreditPanel();
         createLicencPanel();
         tabbedPane = new JTabbedPane();
-        tabbedPane.addTab("About", aboutPanel);
-        tabbedPane.addTab("Credit", creditPanel);
-        tabbedPane.addTab("Licenc", licencPanel);
+        tabbedPane.addTab(
+            mainwindow.con.bundle.getString("About"),
+            aboutPanel);
+        tabbedPane.addTab(
+        mainwindow.con.bundle.getString("Credit"),
+        creditPanel);
+        tabbedPane.addTab(
+        mainwindow.con.bundle.getString("Licence"),
+        licencPanel);
         this.add(tabbedPane);
     }
 
     private void createAboutPanel() {
         JLabel nameLabel = new JLabel("Tpgt");
-        JLabel versionLabel = new JLabel("Version 0.8.0");
-        JLabel authorLabel = new JLabel("Author: Andras Sallai");
+        JLabel versionLabel = new JLabel(
+            mainwindow.con.bundle.getString("Version")
+            + " 0.8.0"
+            );
+        JLabel authorLabel = new JLabel(
+            mainwindow.con.bundle.getString("Author")
+            + ": Andras Sallai"
+            );
         JLabel copyLabel = new JLabel("Copyright (c) 2016, 2019, 2020 Sallai Andras");
         JLabel websiteLabel = new JLabel("http://szit.hu");
         ImageIcon image = new ImageIcon("images/tpgt.png");

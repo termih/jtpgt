@@ -26,7 +26,8 @@ package view;
 import javax.swing.*;
 
 public class Worktable extends JPanel {
-    private static final long serialVersionUID = 429343438l;
+    private static final long serialVersionUID = 429343438788l;
+
     Mainwindow mainwindow;
     public Textpanel textpanel;
     public Charpanel charpanel = new Charpanel();
@@ -36,7 +37,8 @@ public class Worktable extends JPanel {
 
     public Worktable(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
-        this.textpanel =  new Textpanel(mainwindow);
+        this.textpanel = new Textpanel(mainwindow);
+        
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         this.add(textpanel);
         this.add(charpanel);

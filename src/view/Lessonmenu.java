@@ -24,14 +24,12 @@ along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 package view;
 
 import javax.swing.*;
-import controller.Controller;
 import controller.LessonController;
 
 class Lessonmenu extends JMenu {
     private static final long serialVersionUID = 48394393493493l;
     Mainwindow mainwindow;
 
-    Controller con;
     LessonController lcon;
 
     JMenuItem nextLessonMenuItem = new JMenuItem();
@@ -42,12 +40,15 @@ class Lessonmenu extends JMenu {
     public Lessonmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.lcon = new LessonController(mainwindow);
-        this.con = new Controller(mainwindow);
 
-        this.nextLessonMenuItem.setText(con.bundle.getString("nextLesson"));
-        this.repeatLessonMenuItem.setText(con.bundle.getString("repeatLesson"));
-        this.previousLessonMenuItem.setText(con.bundle.getString("previousLesson"));
-        this.exitMenuItem.setText(con.bundle.getString("exit"));
+        this.nextLessonMenuItem.setText(
+            mainwindow.con.bundle.getString("nextLesson"));
+        this.repeatLessonMenuItem.setText(
+            mainwindow.con.bundle.getString("repeatLesson"));
+        this.previousLessonMenuItem.setText(
+            mainwindow.con.bundle.getString("previousLesson"));
+        this.exitMenuItem.setText(
+            mainwindow.con.bundle.getString("exit"));
 
         this.nextLessonMenuItem.addActionListener(
             e -> lcon.nextLesson()
@@ -62,7 +63,7 @@ class Lessonmenu extends JMenu {
             e -> lcon.exit()
         );
 
-        this.setText(con.bundle.getString("Lesson"));
+        this.setText(mainwindow.con.bundle.getString("Lesson"));
         this.add(new Beginnermenu(mainwindow));
         this.add(new Middlemenu(mainwindow));
         this.add(new Advancedmenu(mainwindow));

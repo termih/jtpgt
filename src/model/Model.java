@@ -158,11 +158,18 @@ public class Model {
         setCharColor(0, Color.orange);
         Integer lessonCount = lessonLines.size();
         mainwindow.worktable.statuspanel.rowCountField.setText(
-                "Sorok száma: " + lessonCount.toString());
+                mainwindow.con.bundle.getString("countOfLine")
+                + ": "+ lessonCount.toString());
         mainwindow.worktable.statuspanel.actualRowField.
-            setText("Aktuális sor: 1");
+            setText(
+            mainwindow.con.bundle.getString("ActualLine")
+            + ": 1"
+            );
         mainwindow.worktable.statuspanel.errorField.
-            setText("Hiba: 0");
+            setText(
+            mainwindow.con.bundle.getString("Error")
+            + ": 0"
+            );
         actualLine = 0;
         actualIndex = 0;
         mainwindow.worktable.progresspanel.progressBar.
@@ -183,9 +190,9 @@ public class Model {
         try {
             tryLoadLesson(lessonFileName);
         } catch (FileNotFoundException ex) {
-            System.err.println("Hiba! A fájl nem található!");
+            System.err.println("Error! File not found!");
         } catch (IOException ex) {
-            System.err.println("Hiba! A fájl bezárása sikertelen!");
+            System.err.println("Error! Close file, failed!");
         }
     }
 
@@ -200,7 +207,7 @@ public class Model {
         try {
             tryLoadHelptext(helperFileName);
         } catch (FileNotFoundException e) {
-            System.err.println("Hiba! A helper fájl nem található! " +
+            System.err.println("Error! The helper file not found! " +
                     helperFileName);
         }
     }

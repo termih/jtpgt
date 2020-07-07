@@ -25,12 +25,10 @@ package view;
 
 import javax.swing.*;
 import controller.AdvancedController;
-import controller.Controller;
 
 class Advancedmenu extends JMenu {
     private static final long serialVersionUID = 348384934874l;
     Mainwindow mainwindow;
-    Controller con;
     AdvancedController acon;
 
     JMenuItem lesson29MenuItem = new JMenuItem();
@@ -51,22 +49,21 @@ class Advancedmenu extends JMenu {
     public Advancedmenu(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         acon =  new AdvancedController(mainwindow);
-        con = new Controller(mainwindow);
 
-        lesson29MenuItem.setText(con.bundle.getString("Lesson29"));
-        lesson30MenuItem.setText(con.bundle.getString("Lesson30"));
-        lesson31MenuItem.setText(con.bundle.getString("Lesson31"));
-        lesson32MenuItem.setText(con.bundle.getString("Lesson32"));
-        lesson33MenuItem.setText(con.bundle.getString("Lesson33"));
-        lesson34MenuItem.setText(con.bundle.getString("Lesson34"));
-        lesson35MenuItem.setText(con.bundle.getString("Lesson35"));
-        lesson36MenuItem.setText(con.bundle.getString("Lesson36"));
-        lesson37MenuItem.setText(con.bundle.getString("Lesson37"));
-        lesson38MenuItem.setText(con.bundle.getString("Lesson38"));
-        lesson39MenuItem.setText(con.bundle.getString("Lesson39"));
-        lesson40MenuItem.setText(con.bundle.getString("Lesson40"));
-        lesson41MenuItem.setText(con.bundle.getString("Lesson41"));
-        lesson42MenuItem.setText(con.bundle.getString("Lesson42"));
+        lesson29MenuItem.setText(mainwindow.con.bundle.getString("Lesson29"));
+        lesson30MenuItem.setText(mainwindow.con.bundle.getString("Lesson30"));
+        lesson31MenuItem.setText(mainwindow.con.bundle.getString("Lesson31"));
+        lesson32MenuItem.setText(mainwindow.con.bundle.getString("Lesson32"));
+        lesson33MenuItem.setText(mainwindow.con.bundle.getString("Lesson33"));
+        lesson34MenuItem.setText(mainwindow.con.bundle.getString("Lesson34"));
+        lesson35MenuItem.setText(mainwindow.con.bundle.getString("Lesson35"));
+        lesson36MenuItem.setText(mainwindow.con.bundle.getString("Lesson36"));
+        lesson37MenuItem.setText(mainwindow.con.bundle.getString("Lesson37"));
+        lesson38MenuItem.setText(mainwindow.con.bundle.getString("Lesson38"));
+        lesson39MenuItem.setText(mainwindow.con.bundle.getString("Lesson39"));
+        lesson40MenuItem.setText(mainwindow.con.bundle.getString("Lesson40"));
+        lesson41MenuItem.setText(mainwindow.con.bundle.getString("Lesson41"));
+        lesson42MenuItem.setText(mainwindow.con.bundle.getString("Lesson42"));
 
         lesson29MenuItem.addActionListener(e -> acon.lesson29());
         lesson30MenuItem.addActionListener(e -> acon.lesson30());
@@ -83,7 +80,7 @@ class Advancedmenu extends JMenu {
         lesson41MenuItem.addActionListener(e -> acon.lesson41());
         lesson42MenuItem.addActionListener(e -> acon.lesson42());
 
-        this.setText(con.bundle.getString("Advanced"));
+        this.setText(mainwindow.con.bundle.getString("Advanced"));
         this.add(lesson29MenuItem);
         this.add(lesson30MenuItem);
         this.add(lesson31MenuItem);

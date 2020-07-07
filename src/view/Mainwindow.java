@@ -25,7 +25,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 import model.Model;
-
+import controller.Controller;
 
 public class Mainwindow extends JFrame {
     static final long serialVersionUID = 123254798434l;
@@ -33,16 +33,18 @@ public class Mainwindow extends JFrame {
     public Worktable worktable = new Worktable(this);
     Menubar menubar;
     public Model model;
+    public Controller con;
     public JTextPane lineTextPane = worktable.textpanel.lineTextPane;
 
     public Mainwindow() {
         this.model = new Model(this);
+        this.con = new Controller(this);
         this.menubar = new Menubar(this);
 
         this.setIconImage(new ImageIcon("images/gtpgt.png").getImage());
         this.setLayout( new BorderLayout() );
         this.add(worktable);
-        this.setMinimumSize(new java.awt.Dimension(800, 500));
+        this.setMinimumSize(new java.awt.Dimension(840, 500));
         this.setTitle("jTpgt");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setJMenuBar(menubar);
