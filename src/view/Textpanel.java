@@ -33,7 +33,7 @@ public class Textpanel extends JPanel {
     JScrollPane scrollPane = new JScrollPane();
     public JTextPane lineTextPane = new JTextPane();
     Mainwindow mainwindow;
-    TextpaneController tcon;
+    public TextpaneController tcon;
     public Textpanel(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
         this.tcon = new TextpaneController(mainwindow);

@@ -26,17 +26,44 @@ package controller;
 import java.awt.event.KeyEvent;
 import java.awt.Color;
 import view.Mainwindow;
+import javax.swing.Timer;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class TextpaneController {
+public class TextpaneController implements ActionListener {
 
     boolean enter = false;
     Mainwindow mainwindow;
 
+    Integer keyCount;
+    public Integer maxSpeed;
+
+
+    public Timer timer;
+
     public TextpaneController(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
+        this.keyCount = 0;
+        this.maxSpeed = 0;
+        timer = new Timer(10000, this);
+    }
+
+    public void actionPerformed(ActionEvent evt) {
+        Integer speed = keyCount * 6;
+        mainwindow.worktable.statuspanel.
+            speedField.setText("Speed: " + speed.toString() + " ütés/perc");
+        this.keyCount = 0;
+
+        if(speed > this.maxSpeed) {
+            this.maxSpeed = speed;
+            mainwindow.worktable.statuspanel.
+                maxSpeedField.setText("Max. s.: " + speed.toString() +
+                " ütés/perc");
+        }
     }
 
     public void lineTextPaneKeyPressed(KeyEvent evt) {
+        this.keyCount++;
         if (KeyEvent.VK_ENTER == evt.getKeyCode()) {
             enter = true;
         } else {
@@ -64,6 +91,7 @@ public class TextpaneController {
                 javax.swing.JOptionPane.showMessageDialog(mainwindow, "Vége");
                 mainwindow.worktable.charpanel.charField.setText("");
                 mainwindow.worktable.textpanel.lineTextPane.setText("");
+                this.timer.stop();
             }
         }
     }

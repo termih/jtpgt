@@ -172,6 +172,8 @@ public class Model {
         lessonPointer = 0;
         String helperFilename = lessonFnameToHelperFname(lessonFileName);
         this.loadHelptext(helperFilename);
+        mainwindow.worktable.textpanel.tcon.maxSpeed = 0;
+        mainwindow.worktable.textpanel.tcon.timer.start();
         mainwindow.worktable.cmdpanel.helperTextPane.setCaretPosition(0);
         mainwindow.worktable.charpanel.charField.setText("");
         mainwindow.worktable.charpanel.lessonLabel.setText(lessonFileName);
