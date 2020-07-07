@@ -43,6 +43,7 @@ public class AboutDialog extends JFrame {
         this.mainwindow = mainwindow;
 
         this.setTitle("Tpgt");
+        this.setIconImage(new ImageIcon("images/gtpgt.png").getImage());
         this.setSize(400, 300);
         this.setLayout(new BorderLayout());
         this.setLocationRelativeTo(null);
@@ -74,7 +75,7 @@ public class AboutDialog extends JFrame {
             + ": Andras Sallai"
             );
         JLabel copyLabel = new JLabel("Copyright (c) 2016, 2019, 2020 Sallai Andras");
-        JLabel websiteLabel = new JLabel("http://szit.hu");
+        JLabel websiteLabel = new JLabel("https://szit.hu");
         ImageIcon image = new ImageIcon("images/tpgt.png");
         JLabel imageLabel = new JLabel(image);
         imageLabel.setSize(100, 50);
