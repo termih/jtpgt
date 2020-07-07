@@ -223,12 +223,4 @@ public class Model {
         return helperPath;
     }
 
-    public void kiir() {
-        System.out.println("--------------------------");
-        for(String line : lessonLines) {
-            System.out.println(line);
-        }
-        System.out.println("--------------------------");
-    }
-
 }
