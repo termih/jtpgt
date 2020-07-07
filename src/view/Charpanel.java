@@ -28,6 +28,7 @@ import java.awt.*;
 
 public class Charpanel extends JPanel {
     private static final long serialVersionUID = 4234534343l;
+    private JPanel charFieldPanel = new JPanel();
     public JTextField charField = new JTextField();
     public JLabel lessonLabel = new JLabel();
     GridBagConstraints gridBagConstraints = new GridBagConstraints();
@@ -37,14 +38,16 @@ public class Charpanel extends JPanel {
         this.charField.setMinimumSize(new Dimension(50, 50));
         this.charField.setPreferredSize(new Dimension(50, 50));
 
+        this.charFieldPanel.add(charField);
         this.lessonLabel.setFont(new Font("Dialog", 0, 14));
+        this.lessonLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         this.setBorder(BorderFactory.createEtchedBorder());
-        this.setLayout(new GridBagLayout());
+        this.setLayout(new GridLayout(2, 1));
 
         gridBagConstraints.fill = GridBagConstraints.VERTICAL;
         gridBagConstraints.gridx = 1;
-        this.add(charField, gridBagConstraints);
+        this.add(charFieldPanel, gridBagConstraints);
         this.add(lessonLabel, gridBagConstraints);
     }
 }
