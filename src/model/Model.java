@@ -173,6 +173,7 @@ public class Model {
         String helperFilename = lessonFnameToHelperFname(lessonFileName);
         this.loadHelptext(helperFilename);
         mainwindow.worktable.charpanel.charField.setText("");
+        mainwindow.worktable.charpanel.lessonLabel.setText(lessonFileName);
     }
 
     public void loadLesson(String lessonFileName) {
