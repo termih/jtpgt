@@ -37,6 +37,8 @@ public class AboutDialog extends JFrame {
     JPanel creditPanel;
     JPanel licencPanel;
 
+    String programVersion = "1.0.0";
+
     public AboutDialog(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
 
@@ -65,7 +67,7 @@ public class AboutDialog extends JFrame {
         JLabel nameLabel = new JLabel("Tpgt");
         JLabel versionLabel = new JLabel(
             mainwindow.con.bundle.getString("Version")
-            + " 0.8.0"
+            + " " + programVersion
             );
         JLabel authorLabel = new JLabel(
             mainwindow.con.bundle.getString("Author")

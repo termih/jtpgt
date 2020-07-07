@@ -44,8 +44,8 @@ public class Mainwindow extends JFrame {
         this.setIconImage(new ImageIcon("images/gtpgt.png").getImage());
         this.setLayout( new BorderLayout() );
         this.add(worktable);
-        this.setMinimumSize(new java.awt.Dimension(840, 500));
-        this.setTitle("jTpgt");
+        this.setMinimumSize(new Dimension(840, 500));
+        this.setTitle("Tpgt");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setJMenuBar(menubar);
         this.pack();
