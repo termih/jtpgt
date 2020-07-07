@@ -60,6 +60,7 @@ public class AboutDialog extends JFrame {
         JLabel versionLabel = new JLabel("Version 0.8.0");
         JLabel authorLabel = new JLabel("Author: Andras Sallai");
         JLabel copyLabel = new JLabel("Copyright (c) 2016, 2019, 2020 Sallai Andras");
+        JLabel websiteLabel = new JLabel("http://szit.hu");
         ImageIcon image = new ImageIcon("images/tpgt.png");
         JLabel imageLabel = new JLabel(image);
         imageLabel.setSize(100, 50);
@@ -71,6 +72,7 @@ public class AboutDialog extends JFrame {
         box.add(versionLabel);
         box.add(authorLabel);
         box.add(copyLabel);
+        box.add(websiteLabel);
         box.add(Box.createGlue());
         aboutPanel = new JPanel();
         aboutPanel.add(box, "Center");
