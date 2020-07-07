@@ -50,7 +50,9 @@ public class OptionController {
         }
         app.writeProperties(pro);
         JOptionPane.showMessageDialog(mainwindow,
-            "Elmentve. A program újraindítása szükséges");
+            mainwindow.con.bundle.getString(
+            "ProgramRestart"
+            ));
     }
 
 }
