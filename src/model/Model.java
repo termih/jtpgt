@@ -65,7 +65,14 @@ public class Model {
     }
 
     public void repeatLesson() {
-        this.loadLesson(this.lessonFileName);
+        if(!this.lessonFileName.equals("")) {
+            this.loadLesson(this.lessonFileName);
+        }else {
+            JOptionPane.showMessageDialog(mainwindow,
+            mainwindow.con.bundle.getString("NoLessonsLoad")
+            );
+        }
+
     }
 
     private String convertToLeadingZero(Integer lessonNumber) {
