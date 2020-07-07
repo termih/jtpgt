@@ -187,7 +187,6 @@ public class Model {
     }
 
     public void setCharColor(int index, Color color) {
-        // StyledDocument doc = mainwindow.lineTextPane.getStyledDocument();
         StyledDocument doc = mainwindow.worktable.textpanel.lineTextPane.getStyledDocument();
         SimpleAttributeSet keyChar = new SimpleAttributeSet();
         StyleConstants.setBackground(keyChar, color);
