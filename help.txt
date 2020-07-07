@@ -12,3 +12,6 @@ karakterekhez tartozó billentyűket ne nézzük, a lenyomás
 közben. Az ujjaink pedig, minden lenyomott billentyű után
 térjenek vissza az alaphelyzetbe, mivel innen találjuk meg
 a többit.
+
+A magyar leckékhez magyar billentyűzetkiosztás,
+az angolhoz angol billentyűzetkiosztás szükséges.
