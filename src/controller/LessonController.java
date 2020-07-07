@@ -37,12 +37,10 @@ public class LessonController {
     }
 
     public void repeatLesson() {
-        System.out.println("Lecke ismétlése");
         this.mainwindow.model.repeatLesson();
     }
 
     public void previousLesson() {
-        System.out.println("Előző lecke");
         this.mainwindow.model.loadPreviousLesson();
     }
 
