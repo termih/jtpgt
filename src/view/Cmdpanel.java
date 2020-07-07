@@ -34,7 +34,7 @@ public class Cmdpanel extends JPanel {
         helperTextPane.setFont(new java.awt.Font("Dialog", 0, 14));
         helperTextPane.setMinimumSize(new java.awt.Dimension(6, 200));
         helperTextPane.setPreferredSize(new java.awt.Dimension(6, 200));
-
+        helperTextPane.setEditable(false);
         scrollPane.setViewportView(helperTextPane);
         this.setLayout(new GridLayout(1, 0));
         this.add(scrollPane);
