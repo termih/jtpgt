@@ -36,7 +36,7 @@ public class HelpDialog extends JFrame {
     public HelpDialog(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
 
-        this.setTitle("Tpgt");
+        this.setTitle(mainwindow.model.programName);
         this.setIconImage(new ImageIcon("images/gtpgt.png").getImage());
         this.setSize(600, 400);
         this.setLayout(new BorderLayout());

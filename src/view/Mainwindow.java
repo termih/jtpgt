@@ -45,7 +45,7 @@ public class Mainwindow extends JFrame {
         this.setLayout( new BorderLayout() );
         this.add(worktable);
         this.setMinimumSize(new Dimension(840, 500));
-        this.setTitle("Tpgt");
+        this.setTitle(model.programName);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setJMenuBar(menubar);
         this.pack();

@@ -37,12 +37,9 @@ public class AboutDialog extends JFrame {
     JPanel creditPanel;
     JPanel licencPanel;
 
-    String programVersion = "1.0.0";
-
     public AboutDialog(Mainwindow mainwindow) {
         this.mainwindow = mainwindow;
-
-        this.setTitle("Tpgt");
+        this.setTitle(mainwindow.model.programName);
         this.setIconImage(new ImageIcon("images/gtpgt.png").getImage());
         this.setSize(400, 300);
         this.setLayout(new BorderLayout());
@@ -65,10 +62,10 @@ public class AboutDialog extends JFrame {
     }
 
     private void createAboutPanel() {
-        JLabel nameLabel = new JLabel("Tpgt");
+        JLabel nameLabel = new JLabel(mainwindow.model.programName);
         JLabel versionLabel = new JLabel(
             mainwindow.con.bundle.getString("Version")
-            + " " + programVersion
+            + " " + mainwindow.model.programVersion
             );
         JLabel authorLabel = new JLabel(
             mainwindow.con.bundle.getString("Author")
@@ -128,7 +125,7 @@ public class AboutDialog extends JFrame {
     private JTextArea tryReadFile()
         throws FileNotFoundException, IOException {
         JTextArea textArea = new JTextArea();
-        FileReader reader = new FileReader("license.txt");
+        FileReader reader = new FileReader("licence.txt");
         textArea.read(reader, "licence.txt");
         return textArea;
     }

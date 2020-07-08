@@ -42,6 +42,9 @@ import view.Mainwindow;
 
 public class Model {
 
+    public String programName = "jTpgt";
+    public String programVersion = "1.0.0";
+
     Mainwindow mainwindow;
 
     public ArrayList<String> lessonLines = new ArrayList<>();
