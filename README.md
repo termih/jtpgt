@@ -22,3 +22,21 @@ Sallai András
 
 ## Licenc
 GNU GPL v.3
+
+## Installation
+```shell
+$ git clone git@github.com:termih/jtpgt.git
+$ cd jtpgt
+$ make
+$ make jar
+```
+
+## Usage
+Run the start.sh on Linux, start.bat on Windows
+
+```shell
+someonev@somewhere:~/jtpgt$ start.sh
+```
+```shell
+C:\Users\someone\jtpgt> start.bat
+```
