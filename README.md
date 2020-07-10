@@ -7,7 +7,7 @@ This is a typing trainer program.
 [jtpgt-bin.zip](https://github.com/termih/jtpgt/releases/download/jtpgt/jtpgt-bin.zip)
 
 ## Hungarian webpage
-[jtpgt](https://szit.hu/doku.php?id=szoftverek:jtpgt)
+[https://szit.hu/doku.php?id=szoftverek:jtpgt](https://szit.hu/doku.php?id=szoftverek:jtpgt)
 
 ## Development tools
 Atom code editor, with Java language
