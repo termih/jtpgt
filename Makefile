@@ -37,10 +37,21 @@ CLASSES= \
 	$(CLASSDIR)/view/*.class \
 	$(CLASSDIR)/*.class
 
+DEPLOY_FILES= \
+	./*.sh \
+	./*.bat \
+	./*.jar \
+	./*.txt \
+	./Tpgt.properties
+
+DEPLOY_DIRS= \
+	./lessons/ \
+	./images/
 
 
 Tpgt:
 	javac -d classes $(SOURCES)
+	cp src/*.properties classes
 
 run:
 	java -cp classes $(PROGRAM)
@@ -49,3 +60,10 @@ jar:
 	cd classes; jar cvfm ../tpgt.jar ../manifest.mf *
 clean:
 	rm $(CLASSES)
+
+
+deploy:
+	mkdir -p $(DEPLOY_PATH)
+	rm -rf $(DEPLOY_PATH)/*
+	cp $(DEPLOY_FILES) $(DEPLOY_PATH)
+	cp -r $(DEPLOY_DIRS) $(DEPLOY_PATH)
