@@ -24,6 +24,9 @@ along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 package view;
 
 import javax.swing.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.ActionEvent;
+
 import controller.LessonController;
 
 class Lessonmenu extends JMenu {
@@ -50,6 +53,12 @@ class Lessonmenu extends JMenu {
         this.exitMenuItem.setText(
             mainwindow.con.bundle.getString("exit"));
 
+        this.nextLessonMenuItem.setAccelerator(KeyStroke.getKeyStroke(
+        KeyEvent.VK_1, ActionEvent.ALT_MASK));
+        this.repeatLessonMenuItem.setAccelerator(KeyStroke.getKeyStroke(
+        KeyEvent.VK_2, ActionEvent.ALT_MASK));
+        this.previousLessonMenuItem.setAccelerator(KeyStroke.getKeyStroke(
+        KeyEvent.VK_3, ActionEvent.ALT_MASK));
         this.nextLessonMenuItem.addActionListener(
             e -> lcon.nextLesson()
         );
