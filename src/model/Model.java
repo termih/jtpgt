@@ -24,10 +24,15 @@ along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 package model;
 
 import java.awt.Color;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Scanner;
@@ -146,6 +151,15 @@ public class Model {
         return helperFilename;
     }
 
+
+    private BufferedReader asBufferedReader(String fileName) throws FileNotFoundException {
+        File lessonFile = new File(fileName);
+        FileInputStream fis = new FileInputStream(lessonFile);
+        InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        BufferedReader reader = new BufferedReader(isr);
+        return (reader);
+    }
+    
     public void tryLoadLesson(String lessonFileName)
             throws FileNotFoundException, IOException {
         this.lessonFileName = lessonFileName;
@@ -153,15 +167,16 @@ public class Model {
         String lessonPath = "lessons/" + lessonsLanguage +
             "/" + lessonFileName;
 
-        FileReader fr = new FileReader(lessonPath);
-        Scanner sc = new Scanner(fr);
+        BufferedReader reader = asBufferedReader(lessonPath);
+        Scanner sc = new Scanner(reader);
         lessonLength = 0;
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
             lessonLines.add(line);
             lessonLength += line.length() - 1;
         }
-        fr.close();
+        sc.close();
+        reader.close();
 
         mainwindow.lineTextPane.setText(lessonLines.get(0));
 
@@ -202,7 +217,7 @@ public class Model {
         } catch (FileNotFoundException ex) {
             System.err.println("Error! File not found!");
         } catch (IOException ex) {
-            System.err.println("Error! Close file, failed!");
+            System.err.println("Error! Close lesson file, failed!");
         }
     }
 
@@ -219,20 +234,25 @@ public class Model {
         } catch (FileNotFoundException e) {
             System.err.println("Error! The helper file not found! " +
                     helperFileName);
+        } catch (IOException e) {
+            System.err.println("Error! Close helper file, failed!");
         }
     }
 
     public void tryLoadHelptext(String helperFileName)
-            throws FileNotFoundException {
+            throws IOException {
         mainwindow.worktable.cmdpanel.helperTextPane.setText("");
-        File file = new File(getHelperFilePath(helperFileName));
-        Scanner sc = new Scanner(file);
+        String helperFileLocation = getHelperFilePath(helperFileName);
+        BufferedReader reader = asBufferedReader(helperFileLocation);
+        Scanner sc = new Scanner(reader);
         StringBuilder sb = new StringBuilder();
         while(sc.hasNext()) {
             String line = sc.nextLine();
             sb.append(line);
             sb.append("\n");
         }
+        sc.close();
+        reader.close();
         mainwindow.worktable.cmdpanel.helperTextPane.setText(sb.toString());
     }
 
