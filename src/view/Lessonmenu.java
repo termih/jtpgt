@@ -52,13 +52,7 @@ class Lessonmenu extends JMenu {
             mainwindow.con.bundle.getString("previousLesson"));
         this.exitMenuItem.setText(
             mainwindow.con.bundle.getString("exit"));
-
-        this.nextLessonMenuItem.setAccelerator(KeyStroke.getKeyStroke(
-        KeyEvent.VK_1, ActionEvent.ALT_MASK));
-        this.repeatLessonMenuItem.setAccelerator(KeyStroke.getKeyStroke(
-        KeyEvent.VK_2, ActionEvent.ALT_MASK));
-        this.previousLessonMenuItem.setAccelerator(KeyStroke.getKeyStroke(
-        KeyEvent.VK_3, ActionEvent.ALT_MASK));
+        
         this.nextLessonMenuItem.addActionListener(
             e -> lcon.nextLesson()
         );
