@@ -34,7 +34,7 @@ Run the start.sh on Linux, start.bat on Windows
 
 shell
 ```
-someonev@somewhere:~/jtpgt$ start.sh
+someone@somewhere:~/jtpgt$ start.sh
 ```
 
 shell (e.g. cmd.exe)
