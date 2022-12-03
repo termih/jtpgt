@@ -41,7 +41,7 @@ public class Textpanel extends JPanel {
         this.tcon = new TextpaneController(mainwindow);
         scrollPane.setViewportView(lineTextPane);
         lineTextPane.setEditable(false);
-        lineTextPane.setFont(new java.awt.Font("DejaVu Sans Mono", 0, 24)); // NOI18N
+        lineTextPane.setFont(new java.awt.Font(Font.MONOSPACED, 0, 24)); // NOI18N
         lineTextPane.addKeyListener(new KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tcon.formKeyTyped(evt);

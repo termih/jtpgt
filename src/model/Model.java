@@ -153,15 +153,17 @@ public class Model {
         String lessonPath = "lessons/" + lessonsLanguage +
             "/" + lessonFileName;
 
-        FileReader fr = new FileReader(lessonPath);
-        Scanner sc = new Scanner(fr);
+        System.out.println("fájl útvonal: " + lessonPath);
+
+        File fr = new File(lessonPath);
+        Scanner sc = new Scanner(fr, "UTF-8");
         lessonLength = 0;
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
             lessonLines.add(line);
             lessonLength += line.length() - 1;
         }
-        fr.close();
+        sc.close();
 
         mainwindow.lineTextPane.setText(lessonLines.get(0));
 
@@ -226,7 +228,7 @@ public class Model {
             throws FileNotFoundException {
         mainwindow.worktable.cmdpanel.helperTextPane.setText("");
         File file = new File(getHelperFilePath(helperFileName));
-        Scanner sc = new Scanner(file);
+        Scanner sc = new Scanner(file, "UTF-8");
         StringBuilder sb = new StringBuilder();
         while(sc.hasNext()) {
             String line = sc.nextLine();
