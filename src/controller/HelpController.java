@@ -23,7 +23,6 @@ along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 
 package controller;
 
-import javax.swing.*;
 import view.Mainwindow;
 import view.AboutDialog;
 import view.HelpDialog;

@@ -24,9 +24,7 @@ along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 package controller;
 
 import java.util.*;
-import java.util.ResourceBundle.Control;
 import view.Mainwindow;
-import java.io.*;
 import javax.swing.JOptionPane;
 import model.AppProperties;
 

@@ -27,7 +27,6 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Properties;
 import model.AppProperties;
-import model.Model;
 import view.Mainwindow;
 
 public class Controller {

@@ -23,7 +23,6 @@ along with Foobar.  If not, see <https://www.gnu.org/licenses/>.
 
 package controller;
 
-import java.awt.event.*;
 import view.Mainwindow;
 
 public class BeginnerController {

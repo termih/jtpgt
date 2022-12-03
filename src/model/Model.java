@@ -26,15 +26,11 @@ package model;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Scanner;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
@@ -236,6 +232,7 @@ public class Model {
             sb.append("\n");
         }
         mainwindow.worktable.cmdpanel.helperTextPane.setText(sb.toString());
+        sc.close();
     }
 
     public String getHelperFilePath(String helperFileName) {
