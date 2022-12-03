@@ -40,7 +40,7 @@ CLASSES= \
 
 
 Tpgt:
-	javac -d classes -encoding UTF8 $(SOURCES)
+	javac -d classes -encoding UTF8 --release 8 $(SOURCES)
 
 run:
 	java -cp classes $(PROGRAM)
